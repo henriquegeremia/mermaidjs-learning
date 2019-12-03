@@ -2,7 +2,7 @@
 Resource collection of my mermaidjs learning endeavor =]
 
 # Basic introduction
-[Flowcharts - Basic Syntax](https://github.com/mermaidjs/mermaid-gitbook/blob/master/content/flowchart.md)
+[Flowcharts - Basic Syntax](https://mermaid-js.github.io/mermaid/#/flowchart)
 
 # Live preview
 Until now (2019/12/03), the plugins for VS code don't have support for the last version of the lib.
