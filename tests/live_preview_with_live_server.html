@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .cssClass * {
+      fill: #FF0000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mermaid" id="graph">
+
+    graph RL
+
+    A-->B
+    click A callback "Tooltip for a callback"
+    click B "http://www.github.com" "This is a tooltip for a link"
+    C1
+    D
+    E
+    Q_1
+    Q_2
+    Q_3
+
+    B-->D(fa:fa-db);
+
+    class C*,D,E className;
+    class F cssClass;
+
+    %% classDef className fill:#f9f,stroke:#333,stroke-width:4px;
+    classDef path fill:#f9f,stroke:#123,stroke-width:4px
+    ;
+
+
+    %% style E_Audiencias fill:#00758f
+    %% classDef label stroke-width:0;
+    %% classDef node stroke:#0000ff,stroke-width:4px;
+
+  </div>
+
+  <div style="display: none;">
+
+    A-->B;
+    click A callback "Tooltip for a callback"
+    click B "http://www.github.com" "This is a tooltip for a link"
+
+    id1["This is the (text) in the box"]
+    A["A double quote:#quot;"] -->B["A dec char:#9829;"]
+
+    graph definition
+
+    A1-- This is the text ---B1
+    A2---|This is the text|B2
+    A3-- text -->B3
+    A4-.->B4
+    A5-. text .-> B5
+    A6 ==> B6
+    A7 == text ==> B7
+
+  </div>
+  <script src="mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+    mermaid.flowchartConfig = {
+      width: 20 %
+    };
+  </script>
+
+  <script>
+    var callback = function () {
+      alert('A callback was triggered');
+    }
+
+
+  </script>
+
+  <style>
+    [id^=Q_]:hover * {
+      fill: #FF0000;
+      color: #FF0000;
+      stroke: #FFFF00;
+      stroke-width: 4px;
+    }
+
+    [id^=Q_]:focus * {
+      fill: #FF0000;
+      color: #FF0000;
+      stroke: #FFFF00;
+      stroke-width: 4px;
+    }
+
+    #mermaid-1575409395850 .edgePath .path {
+      stroke: red;
+    }
+  </style>
+</body>
+
+</html>
